@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="index.css/desktop-alibaba.css">
     <link rel="stylesheet" href="index.css/alibaba.css">
     <link rel="stylesheet" href="index.css/alibaba-media-q.css">
+    <link rel="stylesheet" href="index.css/d-parvaz-kharej.css">
     <script src="scripts/alibaba.js" defer></script>
     <title>alibaba.ir</title>
 </head>
@@ -159,7 +160,11 @@
                                 fill-rule="evenodd"></path>
                         </svg>
                     </i>
-                    <span>پرواز داخلی</span>
+                    <span>
+                        <a href="#internal-flight">
+                            پرواز داخلی
+                        </a>
+                    </span>
                 </li>
                 <li>
                     <i>
@@ -170,7 +175,9 @@
                                 fill-rule="evenodd"></path>
                         </svg>
                     </i>
-                    <span>پرواز خارجی</span>
+                    <span onclick="nav_tabs_on()">
+                        <a href="#external-flight">پرواز خارجی</a>
+                    </span>
                 </li>
                 <li>
                     <i>
@@ -181,7 +188,9 @@
                                 fill-rule="evenodd"></path>
                         </svg>
                     </i>
-                    <span>قطار</span>
+                    <span>
+                        <a href="#train">قطار</a>
+                    </span>
                 </li>
                 <li>
                     <i>
@@ -192,7 +201,11 @@
                                 fill-rule="evenodd"></path>
                         </svg>
                     </i>
-                    <span>اتوبوس</span>
+                    <span>
+                        <a href="#bus">
+                            اتوبوس
+                        </a>
+                    </span>
                 </li>
                 <li>
                     <i>
@@ -203,7 +216,9 @@
                             </path>
                         </svg>
                     </i>
-                    <span>تور</span>
+                    <span>
+                        <a href="#tour">تور</a>
+                    </span>
                 </li>
                 <li>
                     <i>
@@ -214,7 +229,9 @@
                                 fill-rule="evenodd"></path>
                         </svg>
                     </i>
-                    <span>هتل</span>
+                    <span>
+                        <a href="#hotel">هتل</a>
+                    </span>
                 </li>
                 <li>
                     <i>
@@ -228,7 +245,9 @@
                                 fill-rule="evenodd"></path>
                         </svg>
                     </i>
-                    <span>ویلا و اقامتگاه</span>
+                    <span>
+                        <a href="#motel">ویلا و اقامتگاه</a>
+                    </span>
                 </li>
             </ul>
             <div class="form-section" id="internal-flight">
@@ -281,6 +300,372 @@
                             <li>
                                 <input id="traveler-count" type="text" value="1 مسافر ">
                                 <label for="traveler-count">مسافران</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="search">
+                        <span>جستجو</span>
+                    </button>
+                </div>
+            </div>
+            <div class="form-section" id="external-flight">
+                <div style="display: flex; justify-content: flex-start; gap: 1rem; align-items: center;">
+                    <div class="direction-btn">
+                        <span>یک طرفه</span>
+                        <i>
+                            <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
+                                class="a-pill-dropdown__caret mr-1">
+                                <path
+                                    d="M6.957 22.678c.627.53 1.55.51 2.153-.045l.052-.051.1-.108 7.972-9.423c.462-.546.513-1.33.127-1.93l-.092-.128-.046-.058L9.25 1.514a1.627 1.627 0 0 0-2.605 1.938l.086.12.046.056L13.86 12l-7.095 8.385a1.627 1.627 0 0 0 .097 2.208l.094.086Z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </i>
+                    </div>
+                    <div class="direction-btn">
+                        <span>اکونومی</span>
+                        <i>
+                            <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
+                                class="a-pill-dropdown__caret mr-1">
+                                <path
+                                    d="M6.957 22.678c.627.53 1.55.51 2.153-.045l.052-.051.1-.108 7.972-9.423c.462-.546.513-1.33.127-1.93l-.092-.128-.046-.058L9.25 1.514a1.627 1.627 0 0 0-2.605 1.938l.086.12.046.056L13.86 12l-7.095 8.385a1.627 1.627 0 0 0 .097 2.208l.094.086Z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </i>
+                    </div>
+                </div>
+                <div class="form-input-section">
+                    <div class="first-input">
+                        <ul>
+                            <li>
+                                <input id="posi" type="text">
+                                <label for="posi">مبدا (شهر، فرودگاه)</label>
+                            </li>
+                            <li>
+                                <input id="destination" type="text">
+                                <label for="destination">مقصد (شهر، فرودگاه)</label>
+                            </li>
+
+                            <div>
+                                <svg viewBox="0 0 24 24" width="1.5em" fill="currentColor">
+                                    <path
+                                        d="m16.96 12.157.07.063 3.75 3.75a.757.757 0 0 1 .06.067l-.06-.067a.748.748 0 0 1 .22.53v.025a.728.728 0 0 1-.003.039L21 16.5a.747.747 0 0 1-.147.446l-.01.014-.008.01-.055.06-3.75 3.75a.75.75 0 0 1-1.123-.99l.063-.07 2.469-2.47H8.25a.75.75 0 0 1-.087-1.495l.087-.005h10.189l-2.47-2.47a.75.75 0 0 1-.062-.99l.063-.07a.75.75 0 0 1 .99-.063ZM8.03 3.22a.75.75 0 0 1 .063.99l-.063.07-2.47 2.47h10.19a.75.75 0 0 1 .088 1.495l-.088.005H5.56l2.47 2.47a.75.75 0 0 1 .063.99l-.063.07a.75.75 0 0 1-.99.063l-.07-.063-3.75-3.75-.055-.06a.644.644 0 0 1-.005-.007l.06.067A.756.756 0 0 1 3 7.5v-.014a.47.47 0 0 1 .003-.053L3 7.5a.756.756 0 0 1 .22-.53l3.75-3.75a.75.75 0 0 1 1.06 0Z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="sec-input">
+                        <ul>
+                            <li>
+                                <input type="datetime" id="leave">
+                                <label for="leave">تاریخ رفت</label>
+                            </li>
+                            <li>
+                                <input type="datetime" id="comingback">
+                                <label for="comingback">تاریخ برگشت</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="third-input">
+                        <ul>
+                            <li>
+                                <input id="traveler-count" type="text" value="1 مسافر ">
+                                <label for="traveler-count">مسافران</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="search">
+                        <span>جستجو</span>
+                    </button>
+                </div>
+            </div>
+            <div class="form-section" id="train">
+                <div style="display: flex; justify-content: flex-start; gap: 1rem; align-items: center;">
+                    <div class="direction-btn">
+                        <span>یک طرفه</span>
+                        <i>
+                            <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
+                                class="a-pill-dropdown__caret mr-1">
+                                <path
+                                    d="M6.957 22.678c.627.53 1.55.51 2.153-.045l.052-.051.1-.108 7.972-9.423c.462-.546.513-1.33.127-1.93l-.092-.128-.046-.058L9.25 1.514a1.627 1.627 0 0 0-2.605 1.938l.086.12.046.056L13.86 12l-7.095 8.385a1.627 1.627 0 0 0 .097 2.208l.094.086Z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </i>
+                    </div>
+                    <div class="direction-btn">
+                        <span>دربست نمی‌خواهم</span>
+                        <i>
+                            <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
+                                class="a-pill-dropdown__caret mr-1">
+                                <path
+                                    d="M6.957 22.678c.627.53 1.55.51 2.153-.045l.052-.051.1-.108 7.972-9.423c.462-.546.513-1.33.127-1.93l-.092-.128-.046-.058L9.25 1.514a1.627 1.627 0 0 0-2.605 1.938l.086.12.046.056L13.86 12l-7.095 8.385a1.627 1.627 0 0 0 .097 2.208l.094.086Z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </i>
+                    </div>
+                    <div class="direction-btn">
+                        <span>مسافرین عادی</span>
+                        <i>
+                            <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
+                                class="a-pill-dropdown__caret mr-1">
+                                <path
+                                    d="M6.957 22.678c.627.53 1.55.51 2.153-.045l.052-.051.1-.108 7.972-9.423c.462-.546.513-1.33.127-1.93l-.092-.128-.046-.058L9.25 1.514a1.627 1.627 0 0 0-2.605 1.938l.086.12.046.056L13.86 12l-7.095 8.385a1.627 1.627 0 0 0 .097 2.208l.094.086Z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </i>
+                    </div>
+                    <div class="direction-btn">
+                        <span>حمل خودرو نمی‌خواهم</span>
+                        <i>
+                            <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
+                                class="a-pill-dropdown__caret mr-1">
+                                <path
+                                    d="M6.957 22.678c.627.53 1.55.51 2.153-.045l.052-.051.1-.108 7.972-9.423c.462-.546.513-1.33.127-1.93l-.092-.128-.046-.058L9.25 1.514a1.627 1.627 0 0 0-2.605 1.938l.086.12.046.056L13.86 12l-7.095 8.385a1.627 1.627 0 0 0 .097 2.208l.094.086Z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </i>
+                    </div>
+                </div>
+                <div class="form-input-section">
+                    <div class="first-input">
+                        <ul>
+                            <li>
+                                <input id="posi" type="text">
+                                <label for="posi">مبدا (شهر)</label>
+                            </li>
+                            <li>
+                                <input id="destination" type="text">
+                                <label for="destination">مقصد (شهر)</label>
+                            </li>
+
+                            <div>
+                                <svg viewBox="0 0 24 24" width="1.5em" fill="currentColor">
+                                    <path
+                                        d="m16.96 12.157.07.063 3.75 3.75a.757.757 0 0 1 .06.067l-.06-.067a.748.748 0 0 1 .22.53v.025a.728.728 0 0 1-.003.039L21 16.5a.747.747 0 0 1-.147.446l-.01.014-.008.01-.055.06-3.75 3.75a.75.75 0 0 1-1.123-.99l.063-.07 2.469-2.47H8.25a.75.75 0 0 1-.087-1.495l.087-.005h10.189l-2.47-2.47a.75.75 0 0 1-.062-.99l.063-.07a.75.75 0 0 1 .99-.063ZM8.03 3.22a.75.75 0 0 1 .063.99l-.063.07-2.47 2.47h10.19a.75.75 0 0 1 .088 1.495l-.088.005H5.56l2.47 2.47a.75.75 0 0 1 .063.99l-.063.07a.75.75 0 0 1-.99.063l-.07-.063-3.75-3.75-.055-.06a.644.644 0 0 1-.005-.007l.06.067A.756.756 0 0 1 3 7.5v-.014a.47.47 0 0 1 .003-.053L3 7.5a.756.756 0 0 1 .22-.53l3.75-3.75a.75.75 0 0 1 1.06 0Z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="sec-input">
+                        <ul>
+                            <li>
+                                <input type="datetime" id="leave">
+                                <label for="leave">تاریخ رفت</label>
+                            </li>
+                            <li>
+                                <input type="datetime" id="comingback">
+                                <label for="comingback">تاریخ برگشت</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="third-input">
+                        <ul>
+                            <li>
+                                <input id="traveler-count" type="text" value="1 مسافر ">
+                                <label for="traveler-count">مسافران</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="search">
+                        <span>جستجو</span>
+                    </button>
+                </div>
+            </div>
+            <div class="form-section" id="bus">
+                <div style="display: flex; justify-content: flex-start; gap: 1rem; align-items: center;"></div>
+                <div class="form-input-section">
+                    <div class="first-input">
+                        <ul>
+                            <li>
+                                <input id="posi" type="text">
+                                <label for="posi">مبدا (شهر، پایانه)</label>
+                            </li>
+                            <li>
+                                <input id="destination" type="text">
+                                <label for="destination">مبدا (شهر، پایانه)</label>
+                            </li>
+
+                            <div>
+                                <svg viewBox="0 0 24 24" width="1.5em" fill="currentColor">
+                                    <path
+                                        d="m16.96 12.157.07.063 3.75 3.75a.757.757 0 0 1 .06.067l-.06-.067a.748.748 0 0 1 .22.53v.025a.728.728 0 0 1-.003.039L21 16.5a.747.747 0 0 1-.147.446l-.01.014-.008.01-.055.06-3.75 3.75a.75.75 0 0 1-1.123-.99l.063-.07 2.469-2.47H8.25a.75.75 0 0 1-.087-1.495l.087-.005h10.189l-2.47-2.47a.75.75 0 0 1-.062-.99l.063-.07a.75.75 0 0 1 .99-.063ZM8.03 3.22a.75.75 0 0 1 .063.99l-.063.07-2.47 2.47h10.19a.75.75 0 0 1 .088 1.495l-.088.005H5.56l2.47 2.47a.75.75 0 0 1 .063.99l-.063.07a.75.75 0 0 1-.99.063l-.07-.063-3.75-3.75-.055-.06a.644.644 0 0 1-.005-.007l.06.067A.756.756 0 0 1 3 7.5v-.014a.47.47 0 0 1 .003-.053L3 7.5a.756.756 0 0 1 .22-.53l3.75-3.75a.75.75 0 0 1 1.06 0Z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="sec-input">
+                        <ul>
+                            <li style="width: 100%;">
+                                <input type="datetime" id="leave">
+                                <label for="leave">تاریخ حرکت</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="search">
+                        <span>جستجو</span>
+                    </button>
+                </div>
+            </div>
+            <div class="form-section" id="tour">
+                <div style="display: flex; justify-content: flex-start; gap: 1rem; align-items: center;">
+                    <div class="radio-tour">
+                        <ul>
+                            <li>
+                                <label id="tour-label" for="radio-one">
+                                    <input type="radio" name="radio" id="radio-one" checked>
+                                    <div class="radio-btn">
+
+                                    </div>
+                                    <div class="label-text">
+                                        <span> تور هتل + بلیط </span>
+                                        <p> بلیط + اقامت متناسب با برنامه شما </p>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label id="tour-label" for="radio-two">
+                                    <input type="radio" name="radio" id="radio-two">
+                                    <div class="radio-btn">
+
+                                    </div>
+                                    <div class="label-text">
+                                        <span> تور هتل + بلیط </span>
+                                        <p> بلیط + اقامت متناسب با برنامه شما </p>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-input-section">
+                    <div class="first-input">
+                        <ul>
+                            <li>
+                                <input id="posi" type="text">
+                                <label for="posi">مبدا (شهر)</label>
+                            </li>
+                            <li>
+                                <input id="destination" type="text">
+                                <label for="destination">مقصد (شهر)</label>
+                            </li>
+
+                            <div>
+                                <svg viewBox="0 0 24 24" width="1.5em" fill="currentColor">
+                                    <path
+                                        d="m16.96 12.157.07.063 3.75 3.75a.757.757 0 0 1 .06.067l-.06-.067a.748.748 0 0 1 .22.53v.025a.728.728 0 0 1-.003.039L21 16.5a.747.747 0 0 1-.147.446l-.01.014-.008.01-.055.06-3.75 3.75a.75.75 0 0 1-1.123-.99l.063-.07 2.469-2.47H8.25a.75.75 0 0 1-.087-1.495l.087-.005h10.189l-2.47-2.47a.75.75 0 0 1-.062-.99l.063-.07a.75.75 0 0 1 .99-.063ZM8.03 3.22a.75.75 0 0 1 .063.99l-.063.07-2.47 2.47h10.19a.75.75 0 0 1 .088 1.495l-.088.005H5.56l2.47 2.47a.75.75 0 0 1 .063.99l-.063.07a.75.75 0 0 1-.99.063l-.07-.063-3.75-3.75-.055-.06a.644.644 0 0 1-.005-.007l.06.067A.756.756 0 0 1 3 7.5v-.014a.47.47 0 0 1 .003-.053L3 7.5a.756.756 0 0 1 .22-.53l3.75-3.75a.75.75 0 0 1 1.06 0Z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="sec-input">
+                        <ul>
+                            <li>
+                                <input type="datetime" id="leave">
+                                <label for="leave">تاریخ رفت</label>
+                            </li>
+                            <li>
+                                <input type="datetime" id="leave">
+                                <label for="leave">تاریخ رفت</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="third-input">
+                        <ul>
+                            <li>
+                                <input id="traveler-count" type="text" value="1 مسافر ">
+                                <label for="traveler-count">مسافران</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="search">
+                        <span>جستجو</span>
+                    </button>
+                </div>
+            </div>
+            <div class="form-section" id="hotel">
+                <div style="display: flex; justify-content: flex-start; gap: 1rem; align-items: center;"></div>
+                <div class="form-input-section">
+                    <div class="first-input">
+                        <ul>
+                            <li style="width: 100%;">
+                                <input id="posi" type="text">
+                                <label for="posi">مقصد یا هتل (داخلی و خارجی)</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sec-input">
+                        <ul>
+                            <li>
+                                <input type="datetime" id="leave">
+                                <label for="leave">تاریخ ورود</label>
+                            </li>
+                            <li>
+                                <input type="datetime" id="leave">
+                                <label for="leave">تاریخ خروج</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="third-input">
+                        <ul>
+                            <li>
+                                <input id="traveler-count" type="text" value="1 مسافر ">
+                                <label for="traveler-count">مسافران</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="search">
+                        <span>جستجو</span>
+                    </button>
+                </div>
+            </div>
+            <div class="form-section" id="motel">
+                <div style="display: flex; justify-content: flex-start; gap: 1rem; align-items: center;"></div>
+                <div class="form-input-section">
+                    <div class="first-input">
+                        <ul>
+                            <li style="width: 100%;">
+                                <input id="posi" type="text">
+                                <label for="posi">مقصد یا نوع اقامتگاه</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sec-input">
+                        <ul>
+                            <li>
+                                <input type="datetime" id="leave">
+                                <label for="leave">تاریخ ورود</label>
+                            </li>
+                            <li>
+                                <input type="datetime" id="leave">
+                                <label for="leave">تاریخ خروج</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="third-input">
+                        <ul>
+                            <li>
+                                <input id="traveler-count" type="text" value="1 مسافر ">
+                                <label for="traveler-count">مسافران</label>
+                                <div class="plus-ng">
+                                    <div>
+                                        <svg viewBox="0 0 24 24" width="16px" height="16px" fill="currentColor">
+                                            <path
+                                                d="M12 3c.585 0 1.065.446 1.12 1.017l.005.108v6.75h6.75a1.125 1.125 0 0 1 .108 2.245l-.108.005h-6.75v6.75a1.125 1.125 0 0 1-2.245.108l-.005-.108v-6.75h-6.75a1.125 1.125 0 0 1-.108-2.245l.108-.005h6.75v-6.75C10.875 3.504 11.379 3 12 3Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <p style="font-size: 16px;">1</p>
+                                    <div>
+                                        <svg viewBox="0 0 24 24" width="16px" height="16px" fill="white">
+                                            <path
+                                                d="M19.875 10.875a1.125 1.125 0 0 1 .108 2.245l-.108.005H4.125a1.125 1.125 0 0 1-.108-2.245l.108-.005h15.75Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -1053,7 +1438,7 @@
                         </i>
                     </div>
                     <ul id="dropdowno">
-                        <div >
+                        <div>
                             <li style="padding-top: 3rem;">مرکز پشتیبانی آنلاین</li>
                             <li>راهنمای خرید</li>
                             <li>راهنمای استرداد</li>
