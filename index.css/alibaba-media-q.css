@@ -263,6 +263,27 @@
             padding: 4rem 3.5rem;
         }
     }
+    .hero-section:has(#internal-flight:target) .active-bar{
+        right: 8.2%;
+    }
+    .hero-section:has(#external-flight:target) .active-bar{
+        right: 22%;
+    }
+    .hero-section:has(#train:target) .active-bar{
+        right: 34.7%;
+    }
+    .hero-section:has(#bus:target) .active-bar{
+        right: 46%;
+    }
+    .hero-section:has(#tour:target) .active-bar{
+        right: 57.4%;
+    }
+    .hero-section:has(#hotel:target) .active-bar{
+        right: 68.3%;
+    }
+    .hero-section:has(#motel:target) .active-bar{
+        right: 81.2%;
+    }
 }
 
 @media all and (min-width: 1000px) and (max-width: 1200px) {
@@ -300,6 +321,27 @@
     }
     .drop-down{
         z-index: 10000 !important;
+    }
+    .hero-section:has(#internal-flight:target) .active-bar{
+        right: 7.2% !important;
+    }
+    .hero-section:has(#external-flight:target) .active-bar{
+        right: 21% !important;
+    }
+    .hero-section:has(#train:target) .active-bar{
+        right: 33.7% !important;
+    }
+    .hero-section:has(#bus:target) .active-bar{
+        right: 45% !important;
+    }
+    .hero-section:has(#tour:target) .active-bar{
+        right: 56.4% !important;
+    }
+    .hero-section:has(#hotel:target) .active-bar{
+        right: 66.3% !important;
+    }
+    .hero-section:has(#motel:target) .active-bar{
+        right: 79.2% !important;
     }
 }
 
@@ -400,6 +442,27 @@
 
     .install-guide {
         display: block;
+    }
+    .hero-section:has(#internal-flight:target) .active-bar{
+        right: 3% !important;
+    }
+    .hero-section:has(#external-flight:target) .active-bar{
+        right: 18.5% !important;
+    }
+    .hero-section:has(#train:target) .active-bar{
+        right: 31.7% !important;
+    }
+    .hero-section:has(#bus:target) .active-bar{
+        right: 44% !important;
+    }
+    .hero-section:has(#tour:target) .active-bar{
+        right: 56.4% !important;
+    }
+    .hero-section:has(#hotel:target) .active-bar{
+        right: 67.3% !important;
+    }
+    .hero-section:has(#motel:target) .active-bar{
+        right: 81.6% !important;
     }
 }
 

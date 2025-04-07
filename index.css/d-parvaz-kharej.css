@@ -232,3 +232,110 @@
         display: none;
     }
 }
+:is(a){
+    color: var(--secondery-clr);
+}
+.active-bar{
+    background: var(--btn-clr);
+    width: 120px;
+    height: 0.5rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    position: absolute;
+    top: 85px;
+    right: 10rem;
+    transition: all 300ms ease-in-out;
+}
+.hero-section:has(#internal-flight:target) .active-bar{
+    right: 8.2%;
+}
+.hero-section:has(#external-flight:target) .active-bar{
+    right: 22%;
+}
+.hero-section:has(#train:target) .active-bar{
+    right: 34.7%;
+}
+.hero-section:has(#bus:target) .active-bar{
+    right: 46%;
+}
+.hero-section:has(#tour:target) .active-bar{
+    right: 57.4%;
+}
+.hero-section:has(#hotel:target) .active-bar{
+    right: 68.3%;
+}
+.hero-section:has(#motel:target) .active-bar{
+    right: 81.2%;
+}
+
+.hero-section >img:not(:first-of-type){
+    display: none;
+}
+.hero-section:has(img:target){
+    img:first-of-type{
+        display: none;
+    }
+}
+.hero-section:has(#external-flight:target) > img#external-flight{
+    display: block;
+}
+.hero-section:has(#train:target) > img#train{
+    display: block;
+}
+.hero-section:has(#bus:target) > img#bus{
+    display: block;
+}
+.hero-section:has(#tour:target) > img#tour{
+    display: block;
+}
+.hero-section:has(#hotel:target) > img#hotel{
+    display: block;
+}
+.hero-section:has(#motel:target) > img#motel{
+    display: block;
+}
+.hero-section:has(#internal-flight:target) .internal-f > svg ,
+.hero-section:has(#internal-flight:target) a[href="#internal-flight"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+.hero-section:has(#external-flight:target) .external-f > svg ,
+.hero-section:has(#external-flight:target) a[href="#external-flight"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+.hero-section:has(#train:target) .train > svg ,
+.hero-section:has(#train:target) a[href="#train"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+.hero-section:has(#bus:target) .bus > svg ,
+.hero-section:has(#bus:target) a[href="#bus"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+.hero-section:has(#tour:target) .tour > svg ,
+.hero-section:has(#tour:target) a[href="#tour"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+.hero-section:has(#hotel:target) .hotel > svg ,
+.hero-section:has(#hotel:target) a[href="#hotel"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+.hero-section:has(#motel:target) .motel > svg ,
+.hero-section:has(#motel:target) a[href="#motel"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+:is(i.internal-f > svg, a[href="#internal-flight"]){
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+
+.hero-section:has(img:target:not(:first-of-type)) i.internal-f > svg ,
+.hero-section:has(img:target:not(:first-of-type)) a[href="#internal-flight"]{
+    color: var(--secondery-clr);
+    fill: var(--secondery-clr);
+}
