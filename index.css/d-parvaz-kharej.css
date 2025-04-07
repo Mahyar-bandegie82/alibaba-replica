@@ -269,29 +269,32 @@
 }
 
 .hero-section >img:not(:first-of-type){
-    display: none;
+    display: none !important;
 }
-.hero-section:has(img:target){
-    img:first-of-type{
-        display: none;
+/* .hero-section:has(:target){
+    >img:first-of-type{
+        display: none !important;
     }
-}
-.hero-section:has(#external-flight:target) > img#external-flight{
+} */
+.hero-section:has(#internal-flight:target) > img.internal-flight{
     display: block;
 }
-.hero-section:has(#train:target) > img#train{
+.hero-section:has(#external-flight:target) > img.external-flight{
     display: block;
 }
-.hero-section:has(#bus:target) > img#bus{
+.hero-section:has(#train:target) > img.train{
     display: block;
 }
-.hero-section:has(#tour:target) > img#tour{
+.hero-section:has(#bus:target) > img.bus{
     display: block;
 }
-.hero-section:has(#hotel:target) > img#hotel{
+.hero-section:has(#tour:target) > img.tour{
     display: block;
 }
-.hero-section:has(#motel:target) > img#motel{
+.hero-section:has(#hotel:target) > img.hotel{
+    display: block;
+}
+.hero-section:has(#motel:target) > img.motel{
     display: block;
 }
 .hero-section:has(#internal-flight:target) .internal-f > svg ,
@@ -329,13 +332,13 @@
     color: var(--btn-clr);
     fill: var(--btn-clr);
 }
-:is(i.internal-f > svg, a[href="#internal-flight"]){
+:is(.internal-f > svg, a[href="#internal-flight"]){
     color: var(--btn-clr);
-    fill: var(--btn-clr);
+    fill: var(--btn-clr) !important;
 }
 
-.hero-section:has(img:target:not(:first-of-type)) i.internal-f > svg ,
-.hero-section:has(img:target:not(:first-of-type)) a[href="#internal-flight"]{
+.hero-section:has(:target:not(:first-of-type)) i.internal-f > svg ,
+.hero-section:has(:target:not(:first-of-type)) a[href="#internal-flight"]{
     color: var(--secondery-clr);
-    fill: var(--secondery-clr);
+    fill: var(--secondery-clr) !important;
 }
