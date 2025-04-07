@@ -267,7 +267,7 @@
 .hero-section:has(#motel:target) .active-bar{
     right: 81.2%;
 }
-
+/* if the code nav section doesnt work as intended you should try comenting or uncomenting next two selectors */
 .hero-section >img:not(:first-of-type){
     display: none !important;
 }
