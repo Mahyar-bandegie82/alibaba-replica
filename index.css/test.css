@@ -1,0 +1,47 @@
+.container{
+    width: 1000px;
+    height: 500px;
+
+}
+button:first-of-type{
+    padding: 1rem 3rem;
+    background: red;
+}
+button:nth-child(2){
+    padding: 1rem 3rem;
+    background: blue;
+}
+button:last-of-type{
+    padding: 1rem 3rem;
+    background: greenyellow;
+}
+.pawn-wrapper{
+    width: 1000px;
+    height: 300px;
+    background: #000;
+    position: relative;
+    transition: all 300ms ease-in-out;
+}
+.pawn{
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    transition: position 300ms ease-in-out !important;
+}
+.container:has(button:first-of-type:focus) .pawn{
+    /* transform: translateX(300px); */
+    transition: all 300ms ease-in-out;
+}
+.container:has(button:nth-child(2):focus) .pawn{
+    /* transform: translateX(600px); */
+    transition: position 300ms ease-in-out;
+}
+.container:has(button:last-of-type:hover) .pawn{
+    /* transform: translateX(900px); */
+    top: 100%;
+    transition: position 300ms ease-in-out !important;
+}
+.pawn:active{
+    transform: scale(1.5);
+}

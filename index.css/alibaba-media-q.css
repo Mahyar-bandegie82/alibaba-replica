@@ -1,0 +1,647 @@
+:root {
+    --header-clr: #E3A107;
+    --white-clr: #e8e7e7;
+    --txt-clr: #4b5259;
+    --primary-txt-clr: #2b2f33;
+    --secondery-clr: rgb(75, 82, 89);
+    ---important-txt-clr: rgb(0, 0, 0);
+    --border-clr: rgba(0, 0, 0, .12);
+    --bg-clr: #ffffff;
+    --btn-clr: rgb(0, 119, 219);
+    --secondery-svg-clr: rgb(23, 162, 184);
+}
+
+@media all and (min-width: 700px) {
+    #header {
+        display: none;
+    }
+
+    #desktop-wrapper-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #desktop-wrapper {
+        width: 78%;
+
+        >* {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    .other-services {
+        margin-top: 18rem;
+        margin-bottom: 2rem;
+
+        >h3 {
+            margin-right: 0;
+        }
+
+        .img-wrapper {
+            flex-direction: row;
+            width: auto;
+        }
+
+        .img-wrapper>img {
+            padding: 0;
+            background-color: transparent;
+            width: 4.6rem;
+            height: 4.6rem;
+        }
+
+        .img-wrapper>span {
+            color: var(--secondery-clr);
+        }
+
+        br {
+            display: none;
+        }
+
+        .other-services--wrapper {
+            border: 1px solid var(--border-clr);
+            border-radius: 0.5rem;
+            padding: 2rem 0;
+        }
+
+        .o-services--list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .o-services--list-item:not(:last-child):after {
+            content: "";
+            width: 1px;
+            height: 30px;
+            background-color: var(--border-clr);
+            margin-right: 7rem;
+        }
+    }
+
+    section#q-and-a {
+        padding-left: 0;
+        padding-right: 0;
+
+        >h4 {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    .carousel-section {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 100%;
+
+        .img-car {
+            height: 20rem;
+            width: calc(50% - 0.5rem);
+        }
+    }
+
+    .install-guide {
+        display: none;
+    }
+
+    #q-and-a>ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0rem !important;
+        border: 1px solid var(--border-clr);
+        border-radius: 1rem;
+
+        :is(li) {
+            border: none !important;
+        }
+
+        :is(li:not(:last-child)) {
+            border-bottom: 1px solid var(--border-clr) !important;
+            border-radius: 0rem;
+        }
+
+        :is(li)>div:first-of-type {
+            padding: 1.5rem 2rem !important;
+        }
+
+        li #answer {
+            padding: 0 5.5rem;
+        }
+
+        li #answer>div {
+            font-size: 14.5px;
+        }
+
+        li #answer>div>p {
+            padding-bottom: 2rem;
+        }
+    }
+
+    /* expalnation */
+    .text-and-png {
+        width: 100%;
+        display: flex;
+
+        :is(img) {
+            width: 42rem;
+            height: 32rem;
+            margin-right: 17rem;
+            object-fit: contain;
+            align-self: flex-start;
+        }
+
+        :is(p) {
+            line-height: 2.5;
+            font-size: 12px !important;
+            word-spacing: 2px;
+        }
+    }
+
+    .explainion {
+        :is(p) {
+            line-height: 2.5;
+            font-size: 12.5px;
+        }
+
+        ul {
+            padding-right: 40px;
+            list-style: circle;
+            margin-bottom: 1rem;
+        }
+
+        ul :is(li) {
+            color: var(--secondery-clr);
+            list-style: disc;
+            font-size: 12.7px !important;
+            text-align: justify;
+            word-spacing: 2px !important;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    #footer-sec {
+        display: none;
+    }
+
+    /* expalnation */
+}
+
+@media (max-width: 700px) {
+    #desktop-wrapper-container {
+        display: flex;
+        justify-content: center;
+    }
+    #desktop-wrapper {
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    #d-header {
+        display: none;
+    }
+
+    .hero-section {
+        display: none;
+    }
+
+    .first-span {
+        white-space: wrap;
+
+    }
+
+    .carousel-section {
+        img:not(:first-of-type) {
+            display: none;
+
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .install-guide-d {
+        display: none;
+    }
+
+    .text-and-png {
+        :is(img) {
+            display: none;
+        }
+    }
+
+    #desk-footer {
+        display: none;
+    }
+}
+
+@media all and (min-width: 1000px) and (max-width: 1300px) {
+    #desktop-wrapper {
+        width: 90%;
+
+        >* {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    #desktop-nav {
+        width: 90%;
+    }
+
+    #desk-footer {
+        padding: 0 7.5rem;
+
+        :is(div:first-child)>ul {
+            padding: 4rem 3.5rem;
+        }
+    }
+    .hero-section:has(#internal-flight:target) .active-bar{
+        right: 8.2%;
+    }
+    .hero-section:has(#external-flight:target) .active-bar{
+        right: 22%;
+    }
+    .hero-section:has(#train:target) .active-bar{
+        right: 34.7%;
+    }
+    .hero-section:has(#bus:target) .active-bar{
+        right: 46%;
+    }
+    .hero-section:has(#tour:target) .active-bar{
+        right: 57.4%;
+    }
+    .hero-section:has(#hotel:target) .active-bar{
+        right: 68.3%;
+    }
+    .hero-section:has(#motel:target) .active-bar{
+        right: 81.2%;
+    }
+}
+
+@media all and (min-width: 1000px) and (max-width: 1200px) {
+    #desktop-wrapper {
+        width: 90%;
+
+        >* {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    #desktop-nav {
+        width: 90%;
+    }
+
+    .text-and-png>img {
+        margin-right: 7rem;
+    }
+
+    #desk-footer {
+        padding: 0 2rem;
+
+        :is(div:first-child)>ul {
+            padding: 4rem 0.5rem;
+        }
+    }
+
+    .d-header-sublist>li {
+        transform: scale(0);
+    }
+
+    .install-guide-d>ul {
+        width: 98%;
+    }
+    .drop-down{
+        z-index: 10000 !important;
+    }
+    .hero-section:has(#internal-flight:target) .active-bar{
+        right: 7.2% !important;
+    }
+    .hero-section:has(#external-flight:target) .active-bar{
+        right: 21% !important;
+    }
+    .hero-section:has(#train:target) .active-bar{
+        right: 33.7% !important;
+    }
+    .hero-section:has(#bus:target) .active-bar{
+        right: 45% !important;
+    }
+    .hero-section:has(#tour:target) .active-bar{
+        right: 56.4% !important;
+    }
+    .hero-section:has(#hotel:target) .active-bar{
+        right: 66.3% !important;
+    }
+    .hero-section:has(#motel:target) .active-bar{
+        right: 79.2% !important;
+    }
+}
+
+@media all and (min-width: 700px) and (max-width: 999px) {
+    /* body {
+        overflow-x: hidden;
+    } */
+
+    #desktop-wrapper {
+        width: 90%;
+
+        >* {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    #desktop-nav {
+        width: 90%;
+        transform: translateY(-60px);
+        
+        ul {
+            padding: 10px 10px;
+        }
+    }
+
+    .text-and-png>img {
+        display: none;
+    }
+
+    #desk-footer {
+        padding: 0 2rem;
+
+        :is(div:first-child)>ul {
+            padding: 4rem 0.5rem;
+        }
+    }
+
+    .d-header-sublist>li {
+        transform: scale(0);
+    }
+
+    #desk-footer li>div {
+        >h3 {
+            font-size: 12.5px !important;
+        }
+
+        >span {
+            font-size: 11px !important;
+            text-align: justify;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .form-section {
+        padding: 2rem 2rem !important;
+
+        ul {
+            padding: 0 !important;
+        }
+    }
+
+    #desk-footer {
+        display: block;
+
+        .first-part {
+            width: 50% !important;
+        }
+
+        .sec-part {
+            width: 50% !important;
+
+            li:nth-child(4)>ul {
+                flex-wrap: wrap !important;
+            }
+        }
+    }
+
+    .o-services--list-item:not(:last-child):after {
+        content: "";
+        width: 1px;
+        height: 30px;
+        background-color: var(--border-clr);
+        margin-right: 3rem !important;
+    }
+
+    .other-services {
+        margin-top: 21rem !important;
+        margin-bottom: 2rem;
+    }
+
+    .install-guide-d {
+        display: none;
+    }
+
+    .install-guide {
+        display: block;
+    }
+    .hero-section:has(#internal-flight:target) .active-bar{
+        right: 3% !important;
+    }
+    .hero-section:has(#external-flight:target) .active-bar{
+        right: 18.5% !important;
+    }
+    .hero-section:has(#train:target) .active-bar{
+        right: 31.7% !important;
+    }
+    .hero-section:has(#bus:target) .active-bar{
+        right: 44% !important;
+    }
+    .hero-section:has(#tour:target) .active-bar{
+        right: 56.4% !important;
+    }
+    .hero-section:has(#hotel:target) .active-bar{
+        right: 67.3% !important;
+    }
+    .hero-section:has(#motel:target) .active-bar{
+        right: 81.6% !important;
+    }
+}
+
+@media all and (min-width: 700px) and (max-width: 800px) {
+    #desktop-wrapper {
+        width: 90%;
+        >* {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    #desktop-nav {
+        width: 100% !important;
+        
+    }
+
+    .text-and-png>img {
+        margin-right: 7rem;
+    }
+
+    #desk-footer {
+        padding: 0 2rem;
+
+        :is(div:first-child)>ul {
+            padding: 4rem 0.5rem;
+        }
+    }
+
+    .d-header-sublist>li {
+        transform: scale(0);
+    }
+
+    .install-guide-d>ul {
+        width: 98%;
+    }
+    .drop-down{
+        z-index: 10000 !important;
+    }
+}
+
+@media all and (min-width: 700px) and (max-width: 999px) {
+    /* body {
+        overflow-x: hidden;
+    } */
+    .drop-down{
+        z-index: 10000 !important;
+    }
+    #desktop-wrapper {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #desktop-nav {
+        width: 90%;
+        transform: translateY(-50px);
+        border-radius: 0;
+
+        ul {
+            padding: 10px 10px;
+        }
+    }
+
+    .text-and-png>img {
+        display: none;
+    }
+
+    #desk-footer {
+        padding: 0 2rem;
+
+        :is(div:first-child)>ul {
+            padding: 4rem 0.5rem;
+        }
+    }
+
+    .d-header-sublist>li {
+        transform: scale(0);
+    }
+
+    #desk-footer li>div {
+        >h3 {
+            font-size: 12.5px !important;
+        }
+
+        >span {
+            font-size: 11px !important;
+            text-align: justify;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .form-section {
+        padding: 2rem 0.rem !important;
+
+        ul {
+            padding: 0 !important;
+        }
+    }
+
+    #desk-footer {
+        display: block;
+
+        .first-part {
+            width: 50% !important;
+        }
+
+        .sec-part {
+            width: 50% !important;
+
+            li:nth-child(4)>ul {
+                flex-wrap: wrap !important;
+            }
+        }
+    }
+
+    .o-services--list-item:not(:last-child):after {
+        content: "";
+        width: 1px;
+        height: 30px;
+        background-color: var(--border-clr);
+        margin-right: 3rem !important;
+    }
+
+    .other-services {
+        margin-top: 21rem !important;
+        margin-bottom: 2rem;
+    }
+
+    .install-guide-d {
+        display: none;
+    }
+
+    .install-guide {
+        display: block;
+    }
+}
+
+
+/* @media all and (min-width: 800px) and (max-width: 900px) {
+    #desk-footer {
+        display: block;
+
+        .first-part {
+            width: 50% !important;
+        }
+
+        .sec-part {
+            width: 50% !important;
+
+            li:nth-child(4)>ul {
+                flex-wrap: wrap !important;
+            }
+        }
+    }
+
+    #desktop-nav {
+        width: 98%;
+        
+    }
+
+    .form-section {
+        padding: 2rem 2rem !important;
+
+        ul {
+            padding: 0 !important;
+        }
+    }
+
+    .install-guide-d {
+        display: none;
+    }
+
+    .install-guide {
+        display: block;
+    }
+} */

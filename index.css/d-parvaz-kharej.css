@@ -1,0 +1,344 @@
+@font-face {
+    font-family: Alibaba;
+    font-style: normal;
+    font-weight: thin;
+    src: url('../fonts/eot/Alibaba-Regular.eot');
+    src: url('../fonts/eot/Alibaba-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/woff2/Alibaba-Regular.woff2') format('woff2'),
+        url('../fonts/woff/Alibaba-Regular.woff') format('woff'),
+        url('../fonts/ttf/Alibaba-Regular.ttf') format('truetype');
+}
+
+:root {
+    --header-clr: #E3A107;
+    --white-clr: #e8e7e7;
+    --txt-clr: #4b5259;
+    --primary-txt-clr: #2b2f33;
+    --secondery-clr: rgb(75, 82, 89);
+    ---important-txt-clr: rgb(0, 0, 0);
+    --border-clr: rgba(0, 0, 0, .12);
+    --bg-clr: #ffffff;
+    --btn-clr: rgb(0, 119, 219);
+    --secondery-svg-clr: rgb(23, 162, 184);
+}
+
+:is(*) {
+    scroll-padding: 50rem;
+}
+
+.open-tab{
+    display: none;
+}
+:is(#external-flight, #train, #bus, #tour, #hotel, #motel) {
+    display: none;
+}
+
+:is(#internal-flight, #external-flight, #train, #bus, #tour, #hotel, #motel):target {
+    display: block;
+}
+:is(#internal-flight , #external-flight , #train, #hotel)  :is(.first-input){
+    width: 50rem;
+}
+:is(#internal-flight , #external-flight , #train, #hotel)  :is(.sec-input){
+    width: 40rem !important;
+}
+#external-flight .first-input label{
+    font-size: 12px;
+    padding: 0;
+}
+:is(#bus, #tour)>.form-input-section {
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+:is(#tour)>.form-input-section {
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    padding-top: 0rem !important;
+}
+
+
+:is(#bus, #tour) .sec-input {
+    width: 40rem;
+    border: rgba(0, 0, 0, 0.2) 1px solid;
+    border-radius: 0.7rem;
+    margin-top: 2rem;
+}
+
+#bus .first-input {
+    gap: 0;
+    width: 55rem;
+    border: rgba(0, 0, 0, 0.2) 1px solid;
+    border-radius: 0.7rem;
+    margin-top: 2rem;
+}
+
+.radio-tour>ul,
+.radio-tour>ul>li>:is(label) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.radio-tour input[type="radio"] {
+    transform: scale(0);
+}
+
+.radio-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid rgba(128, 128, 128, 0.744);
+    border-radius: 50%;
+    background: white;
+    position: relative;
+    margin-left: 1rem;
+}
+
+.radio-btn::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    z-index: 10000;
+    top: 50%;
+    right: 50%;
+    transform: translate(50% , -50%);
+}
+:is(#radio-one , #radio-two):checked + .radio-btn{
+    background-color: var(--btn-clr);
+}
+.label-text{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-direction: column;
+    >span{
+        font-size: 14px;
+    }
+    >p{
+        font-size: 13px;
+        color: var(--txt-clr);
+    }
+}
+#tour-label{
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    padding: 1rem 0rem 1rem 1.3rem;
+    border-radius: 1rem;
+    margin-left: 1rem;
+}
+#hotel .form-input-section , #motel .form-input-section{
+    padding-top: 5rem;
+}
+#motel .third-input li{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+}
+#motel .third-input li{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+}
+#motel .third-input li .plus-ng{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    gap: 1rem;
+}
+#motel .third-input li .plus-ng > div >svg{
+    fill: white;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+#motel .third-input li .plus-ng > div{
+    background-color: var(--btn-clr);
+    padding: 0.5rem;
+    padding-bottom: 0;
+    border-radius: 0.5rem;
+    height: fit-content;
+}
+#motel .third-input{
+    width: 25rem;
+    >ul :is(li) {
+        width: 100%;
+        padding: 0.9rem 1rem;
+    }
+}
+#internal-flight .form-input-section :is(.first-input){
+    width: 50rem !important;
+}
+#internal-flight .form-input-section :is(.sec-input){
+    width: 40rem !important; 
+}
+#external-flight .form-input-section :is(.first-input){
+    width: 55rem !important;
+}
+#external-flight .form-input-section :is(.sec-input){
+    width: 30rem !important; 
+    label{
+        font-size: 11px !important;
+    }
+}
+#bus .form-input-section :is(.first-input){
+    width: 60rem !important; 
+}
+#bus .form-input-section :is(.sec-input){
+    width: 35rem !important; 
+}
+#motel .form-input-section :is(.first-input){
+    width: 35rem !important;
+}
+#motel .form-input-section :is(.sec-input){
+    width: 40rem !important; 
+}
+#motel .form-input-section :is(.third-input){
+    width: 30rem !important; 
+}
+#desktop-nav:has(#external-flight:target){
+    #internal-flight{
+        display: none;
+    }
+}
+#desktop-nav:has(#train:target){
+    #internal-flight{
+        display: none;
+    }
+}
+#desktop-nav:has(#bus:target){
+    #internal-flight{
+        display: none;
+    }
+}
+#desktop-nav:has(#tour:target){
+    #internal-flight{
+        display: none;
+    }
+}
+#desktop-nav:has(#hotel:target){
+    #internal-flight{
+        display: none;
+    }
+}
+#desktop-nav:has(#motel:target){
+    #internal-flight{
+        display: none;
+    }
+}
+:is(a){
+    color: var(--secondery-clr);
+}
+.active-bar{
+    background: var(--btn-clr);
+    width: 120px;
+    height: 0.5rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    position: absolute;
+    top: 85px;
+    right: 10rem;
+    transition: all 300ms ease-in-out;
+}
+.hero-section:has(#internal-flight:target) .active-bar{
+    right: 8.2%;
+}
+.hero-section:has(#external-flight:target) .active-bar{
+    right: 22%;
+}
+.hero-section:has(#train:target) .active-bar{
+    right: 34.7%;
+}
+.hero-section:has(#bus:target) .active-bar{
+    right: 46%;
+}
+.hero-section:has(#tour:target) .active-bar{
+    right: 57.4%;
+}
+.hero-section:has(#hotel:target) .active-bar{
+    right: 68.3%;
+}
+.hero-section:has(#motel:target) .active-bar{
+    right: 81.2%;
+}
+
+.hero-section >img:not(:first-of-type){
+    display: none;
+}
+.hero-section:has(:target){
+    img:first-of-type{
+        display: none;
+    }
+}
+.hero-section:has(#internal-flight:target) > img.internal-flight{
+    display: block;
+}
+.hero-section:has(#external-flight:target) > img.external-flight{
+    display: block;
+}
+.hero-section:has(#train:target) > img.train{
+    display: block;
+}
+.hero-section:has(#bus:target) > img.bus{
+    display: block;
+}
+.hero-section:has(#tour:target) > img.tour{
+    display: block;
+}
+.hero-section:has(#hotel:target) > img.hotel{
+    display: block;
+}
+.hero-section:has(#motel:target) > img.motel{
+    display: block;
+}
+.hero-section:has(#internal-flight:target) .internal-f > svg ,
+.hero-section:has(#internal-flight:target) a[href="#internal-flight"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+.hero-section:has(#external-flight:target) .external-f > svg ,
+.hero-section:has(#external-flight:target) a[href="#external-flight"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+.hero-section:has(#train:target) .train > svg ,
+.hero-section:has(#train:target) a[href="#train"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+.hero-section:has(#bus:target) .bus > svg ,
+.hero-section:has(#bus:target) a[href="#bus"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+.hero-section:has(#tour:target) .tour > svg ,
+.hero-section:has(#tour:target) a[href="#tour"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+.hero-section:has(#hotel:target) .hotel > svg ,
+.hero-section:has(#hotel:target) a[href="#hotel"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+.hero-section:has(#motel:target) .motel > svg ,
+.hero-section:has(#motel:target) a[href="#motel"]{
+    color: var(--btn-clr);
+    fill: var(--btn-clr);
+}
+:is(.internal-f > svg, a[href="#internal-flight"]){
+    color: var(--btn-clr);
+    fill: var(--btn-clr) !important;
+} 
+
+.hero-section:has(:target:not(:first-of-type)) i.internal-f > svg ,
+.hero-section:has(:target:not(:first-of-type)) a[href="#internal-flight"]{
+    color: var(--secondery-clr);
+    fill: var(--secondery-clr) !important;
+}
