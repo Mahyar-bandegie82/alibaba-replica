@@ -259,13 +259,13 @@
     right: 46%;
 }
 .hero-section:has(#tour:target) .active-bar{
-    right: 57.4%;
+    right: 57.2%;
 }
 .hero-section:has(#hotel:target) .active-bar{
-    right: 68.3%;
+    right: 67.4%;
 }
 .hero-section:has(#motel:target) .active-bar{
-    right: 81.2%;
+    right: 80.5%;
 }
 
 .hero-section >img:not(:first-of-type){
